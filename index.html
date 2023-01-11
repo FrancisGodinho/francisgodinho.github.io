@@ -4,10 +4,38 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>HTML 5 Boilerplate</title>
+    <title>Francis' Website</title>
+    <link rel="stylesheet" href="https://pyscript.net/latest/pyscript.css" />
     <link rel="stylesheet" href="style.css">
+    <script defer src="https://pyscript.net/latest/pyscript.js"></script>
   </head>
   <body>
-	<script src="index.js"></script>
+	  <script src="index.js"></script>
+    <h3>What is the output of the following python code?</h3>
+    <div class="test">
+      <div>
+        funcs = [lambda x: i * x for i in range(4)]
+      </div>
+      <div>
+        for f in funcs:
+      </div>
+      <div class="indent1">
+	      print(f(2)) 
+      </div>
+    </div>
+    <button class="submit-button" type="button" id="txt">Run!</button>
+    <py-script>
+      from js import document, console
+      from pyodide import create_proxy
+
+      def _eventlog(e):
+        funcs = [lambda x: i * x for i in range(4)]
+        for f in funcs:
+	        print(f(2)) 
+
+      eventlog = create_proxy(_eventlog)
+      print()
+      document.getElementById("txt").addEventListener("click", eventlog)
+    </py-script>
   </body>
 </html>

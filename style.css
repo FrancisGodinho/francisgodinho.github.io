@@ -1,0 +1,25 @@
+body {
+	padding: 1rem;
+	background-color: whitesmoke;
+	color: #252525;
+	font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+.test {
+	margin-left: 2rem;
+	padding: 1rem;
+}
+
+.indent1 {
+	margin-left: 2rem;
+}
+
+button {
+	padding: 0.6rem;
+	padding-left: 1rem;
+	padding-right: 1rem;
+	border-radius: 8%;
+	border: 1px solid grey;
+}
+.submit-button {
+
+}

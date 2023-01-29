@@ -7,36 +7,49 @@
     <title>Francis' Website</title>
     <link rel="stylesheet" href="https://pyscript.net/latest/pyscript.css" />
     <link rel="stylesheet" href="style.css">
-    <script defer src="https://pyscript.net/latest/pyscript.js"></script>
+    <link rel="stylesheet" href="home.css">
+    <!-- <script defer src="https://pyscript.net/latest/pyscript.js"></script> -->
   </head>
   <body>
 	  <script src="index.js"></script>
-    <h3>What is the output of the following Python code?</h3>
-    <div class="test">
-      <div>
-        funcs = [lambda x: i * x for i in range(4)]
+    <div class="header">
+      <h1>Cursed Python</h1>
+      <h4>A collection of Python snippets that make you go ???</h4>
+    </div>
+    <div class="container">
+      <div class="row">
+        <a class="card" href="./modules/1.html" style="background-color: #306998; color: whitesmoke;">
+          <h6>List of Lambdas</h6>
+        </a>
+        <a class="card" href="./modules/1.html" style="background-color: #FFD43B; color: #252525;">
+          <h6>Hello</h6>
+        </a>
+        <a class="card" href="./modules/1.html" style="background-color: #306998; color: whitesmoke;">
+          <h6>Hello</h6>
+        </a>
       </div>
-      <div>
-        for f in funcs:
+      <div class="row">
+        <a class="card" href="./modules/1.html" style="background-color: #FFD43B; color: #252525;">
+          <h6>Hello</h6>
+        </a>
+        <a class="card" href="./modules/1.html" style="background-color: #306998; color: whitesmoke;">
+          <h6>Hello</h6>
+        </a>
+        <a class="card" href="./modules/1.html" style="background-color: #FFD43B; color: #252525;">
+          <h6>Hello</h6>
+        </a>
       </div>
-      <div class="indent1">
-	      print(f(2)) 
+      <div class="row">
+        <a class="card" href="./modules/1.html" style="background-color: #306998; color: whitesmoke;">
+          <h6>List of Lambdas</h6>
+        </a>
+        <a class="card" href="./modules/1.html" style="background-color: #FFD43B; color: #252525;">
+          <h6>Hello</h6>
+        </a>
+        <a class="card" href="./modules/1.html" style="background-color: #306998; color: whitesmoke;">
+          <h6>Hello</h6>
+        </a>
       </div>
     </div>
-    <button class="submit-button" type="button" id="txt">Run!</button>
-    <py-script>
-      from js import document, console
-      from pyodide import create_proxy
-
-      def _eventlog(e):
-        funcs = [lambda x: i * x for i in range(4)]
-        for f in funcs:
-	        print(f(2)) 
-        print()
-
-      eventlog = create_proxy(_eventlog)
-      print()
-      document.getElementById("txt").addEventListener("click", eventlog)
-    </py-script>
   </body>
 </html>

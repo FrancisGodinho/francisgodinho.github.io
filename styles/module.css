@@ -23,6 +23,7 @@ button {
 }
 h3 {
 	font-size: 24px;
+	padding: 1rem;
 }
 .header {
 	width: 100%;
@@ -36,6 +37,7 @@ h3 {
 	font-family: Cascadia Code;
 	background-color: #383838;
 	padding: 1rem;
+	margin: 1rem;
 	color: whitesmoke;
 	border-radius: 16px;
 }
@@ -52,13 +54,13 @@ h3 {
 	justify-content: center;
 }
 py-terminal {
+	margin-top: 1rem;
 	display: flex;
 	justify-content: center;
 	border-radius: 20px;
 }
 pre {
 	width: 60vw;
-	padding: 2rem;
 	border-radius: 16px;
 }
 .indent1 {

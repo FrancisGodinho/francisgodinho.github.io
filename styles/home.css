@@ -17,6 +17,7 @@ body {
 	background-color: whitesmoke;
 	color: #252525;
 	font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+	overflow-x: hidden;
 }
 h1 {
 	padding: 0;

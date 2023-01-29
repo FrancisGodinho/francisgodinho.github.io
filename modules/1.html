@@ -6,37 +6,58 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Francis' Website</title>
     <link rel="stylesheet" href="https://pyscript.net/latest/pyscript.css" />
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../style.css">
     <script defer src="https://pyscript.net/latest/pyscript.js"></script>
   </head>
   <body>
-	  <script src="index.js"></script>
-    <h3>What is the output of the following Python code?</h3>
-    <div class="test">
+	  <script src="../index.js"></script>
+    <div class="container">
       <div>
-        funcs = [lambda x: i * x for i in range(4)]
-      </div>
-      <div>
-        for f in funcs:
-      </div>
-      <div class="indent1">
-	      print(f(2)) 
+        <div class="header">
+          <h3>What is the output of the following Python code?</h3>
+        </div>
+        <div class="code">
+          <div>
+            funcs = [lambda x: i * x for i in range(4)]
+          </div>
+          <div>
+            for f in funcs:
+          </div>
+          <div class="indent1">
+	        print(f(2)) 
+          </div>
+        </div>
+        <div class="button-container">
+          <button type="button" id="clear" style="background-color: grey;">Clear</button>
+          <button type="button" id="run">Run!</button>
+        </div>
+        <py-script>
+          from js import document, console, window
+          from pyodide import create_proxy
+          import sys
+
+          def module():
+            funcs = [lambda x: i * x for i in range(4)]
+            for f in funcs:
+	            print(f(2)) 
+
+          def _eventlog(e):
+            module()
+            print()
+
+          def _reload(e):
+            window.location.reload()
+
+          print() # this is the first print to show console
+
+          # some js event listeners
+          eventlog = create_proxy(_eventlog)
+          reload = create_proxy(_reload)
+
+          document.getElementById("run").addEventListener("click", eventlog)
+          document.getElementById("clear").addEventListener("click", reload)
+        </py-script>
       </div>
     </div>
-    <button class="submit-button" type="button" id="txt">Run!</button>
-    <py-script>
-      from js import document, console
-      from pyodide import create_proxy
-
-      def _eventlog(e):
-        funcs = [lambda x: i * x for i in range(4)]
-        for f in funcs:
-	        print(f(2)) 
-        print()
-
-      eventlog = create_proxy(_eventlog)
-      print()
-      document.getElementById("txt").addEventListener("click", eventlog)
-    </py-script>
   </body>
 </html>

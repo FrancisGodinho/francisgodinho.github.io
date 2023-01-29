@@ -37,6 +37,7 @@ h3 {
 	background-color: #383838;
 	padding: 1rem;
 	color: whitesmoke;
+	border-radius: 16px;
 }
 .button-container {
 	width: 60vw;
@@ -53,10 +54,12 @@ h3 {
 py-terminal {
 	display: flex;
 	justify-content: center;
+	border-radius: 20px;
 }
 pre {
 	width: 60vw;
 	padding: 2rem;
+	border-radius: 16px;
 }
 .indent1 {
 	margin-left: 2rem;

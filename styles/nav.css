@@ -28,6 +28,7 @@ a{
 .nav-links{
 	display: flex;
 	flex-direction: row;
+	margin-right: 1rem;
 }
 
 .nav-link {

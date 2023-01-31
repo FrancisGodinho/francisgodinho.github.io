@@ -28,9 +28,13 @@
           <h3>What is the output of the following Python code?</h3>
         </div>
         <div class="code">
-          <div> funcs = [lambda x: i * x for i in range(4)] </div>
-          <div> for f in funcs: </div>
-          <div class="indent1"> print(f(2)) </div>
+          <div>a, b = a[:] = [[0]], []</div>
+          <div>print(a[0])</div>
+          <div>print(a[0][0])</div>
+          <div>print(a[0][0][0])</div>
+          <br />
+          <div>c, d = c[d] = c = [1, 2, 3], 2</div>
+          <div>print(c)</div>
         </div>
         <div class="button-container">
           <button type="button" id="clear" style="background-color: grey;">Clear</button>
@@ -42,9 +46,13 @@
           import sys
 
           def module():
-            funcs = [lambda x: i * x for i in range(4)]
-            for f in funcs:
-	            print(f(2)) 
+            a, b = a[:] = [[0]], []
+            print(a[0])
+            print(a[0][0])
+            print(a[0][0][0])
+
+            c, d = c[d] = c = [1, 2, 3], 2
+            print(c)
 
           def _eventlog(e):
             module()

@@ -28,9 +28,23 @@
           <h3>What is the output of the following Python code?</h3>
         </div>
         <div class="code">
-          <div> funcs = [lambda x: i * x for i in range(4)] </div>
-          <div> for f in funcs: </div>
-          <div class="indent1"> print(f(2)) </div>
+          <div>class A:</div>
+	        <div class="indent1">def __init__(self):</div>
+	        <div class="indent2">self.__count = 0</div>
+          <br/>
+	        <div class="indent1">def get_count(self):</div>
+	        <div class="indent2">return self.__count</div>
+          <br />
+	        <div class="indent1">def set_count(self, val):</div>
+	        <div class="indent2">self.__count = val</div>
+          <br />
+          <div>a = A()</div>
+          <br />
+          <div>a.set_count(1)</div>
+          <div>print(a.get_count())</div>
+          <br />
+          <div>a.__count = 2</div>
+          <div>print(a.get_count())</div>
         </div>
         <div class="button-container">
           <button type="button" id="clear" style="background-color: grey;">Clear</button>
@@ -42,9 +56,22 @@
           import sys
 
           def module():
-            funcs = [lambda x: i * x for i in range(4)]
-            for f in funcs:
-	            print(f(2)) 
+            class A:
+	            def __init__(self):
+		            self.__count = 0
+	
+	            def get_count(self):
+		            return self.__count
+	
+	            def set_count(self, val):
+		            self.__count = val
+            a = A()
+
+            a.set_count(1)
+            print(a.get_count())
+
+            a.__count = 2
+            print(a.get_count())
 
           def _eventlog(e):
             module()

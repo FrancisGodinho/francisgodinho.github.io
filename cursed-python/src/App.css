@@ -1,4 +1,5 @@
-@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:regular,bold,italic&subset=latin,latin-ext');
+/* @import url('https://fonts.googleapis.com/css2?family=Fira+Code&display=swap'); */
+@import url('https://fonts.googleapis.com/css2?family=Inria+Sans&display=swap');
 
 
 body, html {
@@ -6,5 +7,29 @@ body, html {
   width: 100%;
   padding: 0;
   margin: 0;
-  background-color: #3f4f6b;
+  background-color: #242d42;
+  font-family: "Inria Sans", Times, serif !important;
+}
+
+.py-terminal {
+  position: absolute;
+  left: -100rem;
+}
+
+.py-repl-editor {
+  /* background-color: whitesmoke !important; */
+  border-radius: 8px !important;
+  padding: 1rem;
+}
+.py-repl-box {
+  border-radius: 8px !important;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  padding: 0;
+  margin: 0;
+}
+
+.container {
+  font-family: 'Inria Sans', Times, serif !important;
 }

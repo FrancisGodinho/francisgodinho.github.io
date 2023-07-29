@@ -10,7 +10,7 @@ const ProblemTag = ({ difficulty }) => {
   };
 
   return (
-    <div style={{backgroundColor: bg[difficulty] ?? "grey", color: "whitesmoke", padding: "0.2rem", borderRadius: "12px", display: "flex", justifyContent: "center", alignItems: "center", width: "22%", fontSize: "0.7rem"}}>
+    <div style={{backgroundColor: bg[difficulty] ?? "grey", color: "whitesmoke", padding: "0.2rem", paddingLeft: "0.4rem", paddingRight: "0.4rem", borderRadius: "12px", display: "flex", justifyContent: "center", alignItems: "center", width: "22%", fontSize: "0.7rem"}}>
       {difficulty}
     </div>
   )
@@ -25,11 +25,11 @@ function ProblemBox({ problem }) {
   const [bg, setBg] = useState(OFF_HOVER);
 
   return (
-    <div 
-      style={{backgroundColor: bg, width: "12rem", height: "4rem", padding: "1rem", borderRadius: "12px", display: "flex", flexDirection: "column", justifyContent: "space-between"}}
-      onClick={() => {navigate(`/problem/${problem.id}`)}}
+    <a 
+      style={{backgroundColor: bg, width: "12rem", height: "4rem", padding: "1rem", borderRadius: "12px", display: "flex", flexDirection: "column", justifyContent: "space-between", textDecoration: "none", color: "black"}}
       onMouseEnter={() => setBg(ON_HOVER)}
       onMouseLeave={() => setBg(OFF_HOVER)}
+      href={`/problem/${problem.id}`}
     >
       <div style={{width: "100%"}}>
         {problem.title}
@@ -37,7 +37,7 @@ function ProblemBox({ problem }) {
       <div style={{width: "100%", display: "flex", justifyContent: "flex-end"}}>
         <ProblemTag difficulty={problem.difficulty}/>
       </div>
-    </div>
+    </a>
   )
 }
 

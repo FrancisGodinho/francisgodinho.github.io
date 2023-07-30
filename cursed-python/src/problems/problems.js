@@ -50,8 +50,7 @@ export default [
         code: `
         def func(arg=[]):
             arg.append(1)
-        	print(arg)
-
+            print(arg)
         func()
         func([1])
         func()
